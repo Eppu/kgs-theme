@@ -80,15 +80,11 @@ button {
 header h1,
 .details .carousel,
 .social a:hover{
-	/*color: #0bf397;*/
 	color: #155060;
-
-	/* #f600a5;*/
 }
 .payoff h1{
 	color: #c5c5c5;;
 }
-
 
 .features p{
 	color: #FFFFFF;
@@ -355,11 +351,7 @@ header p.lead{
 	text-align: center;
 }
 
-.features span.glyphicon, .features i{
-	margin-top: 3px;
-	color: #ffffff;
-	font-size: 5em;
-}
+
 
 /*-----------------------------------------------------------------------------------*/
 /*	SOCIAL
@@ -367,7 +359,7 @@ header p.lead{
 
 .social{
 	overflow: hidden;
-	padding: 80px 0px 150px 0px;
+	padding: 80px 0px 140px 0px;
 	min-height: 350px;
 	background: url('img/sea.jpg');
 	background-position: center top;
@@ -382,14 +374,17 @@ header p.lead{
 .social a {
 	margin-left: 10px;
 	color: #FFF;
-	font-size: 5em;
 	transition: all 0.3s;
 }
 
 .social a:hover{
 	text-decoration: none;
 	cursor: pointer;
+}
 
+#social-icons li a i{
+	display: block;
+	padding-bottom: 50px;
 }
 
 /*-----------------------------------------------------------------------------------*/
@@ -397,7 +392,7 @@ header p.lead{
 /*-----------------------------------------------------------------------------------*/
 
 .get-it{
-	padding: 100px 0px 160px 0px;
+	padding: 100px 0px 40px 0px;
 	text-align: center;
 }
 

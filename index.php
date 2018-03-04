@@ -105,6 +105,7 @@
       <?php endwhile;
       endif; ?>
       <?php wp_reset_postdata(); ?>
+
       </div>
     </div>
   </section>
@@ -115,16 +116,23 @@
   <section class="social">
     <div class="container">
       <div class="row">
+        <?php
+              $args = array(
+                'post_type' => 'post',
+                'category_name' => 'contact'
+              );
+              $the_query = new WP_Query ( $args );
+        ?>
+        <?php if ( have_posts() ) : while ( $the_query->have_posts() ) :
+                    $the_query->the_post(); ?>
         <div class="col-md-12">
-          <h2>Connect with us</h2>
+          <h2><?php the_title() ?></h2>
           <br />
-          <p>Filler text here!</p>
-          <!-- <a class="icon-facebook"></a>
-          <a class="icon-twitter"></a>
-          <a class="icon-google"></a>
-          <a class="icon-instagram"></a>
-          <a class="icon-pinterest"></a> -->
+          <p><?php the_content() ?></p>
         </div>
+      <?php endwhile;
+      endif; ?>
+
       </div>
     </div>
 
