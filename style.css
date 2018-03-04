@@ -203,12 +203,6 @@ header p.lead{
 	min-height: 200px;
 }
 
-.purchase button.app-store{
-	width: 152px;
-	height: 52px;
-	background: url(img/badge-appstore.png) #3a3a3a no-repeat 0px 5px;
-	color: white;
-}
 
 /*-----------------------------------------------------------------------------------*/
 /*	PAYOFF
@@ -223,6 +217,7 @@ header p.lead{
 	background-repeat: repeat-x;
 	color: white;
 }
+
 
 .payoff h1{
 	text-transform: uppercase;
@@ -392,8 +387,16 @@ header p.lead{
 /*-----------------------------------------------------------------------------------*/
 
 .get-it{
-	padding: 100px 0px 40px 0px;
+	padding: 80px 0px 40px 0px;
 	text-align: center;
+}
+
+.get-it h1{
+	padding-bottom: 20px;
+}
+
+.get-it p{
+	font-size: 20px;
 }
 
 .get-it button.app-store{

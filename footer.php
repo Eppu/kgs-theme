@@ -6,11 +6,22 @@
 <section class="get-it">
   <div class="container">
     <div class="row">
-      <div class="col-md-12">
-        <h1>Avaialable now on the App Store</h1>
-        <p class="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit</p>
-        <button type="button" class="app-store"></button>
-      </div>
+      <?php
+            $args = array(
+              'post_type' => 'post',
+              'category_name' => 'download'
+            );
+            $the_query = new WP_Query ( $args );
+      ?>
+      <?php if ( have_posts() ) : while ( $the_query->have_posts() ) :
+                  $the_query->the_post(); ?>
+                  <div class="col-md-12">
+                    <h1><?php the_title() ?></h1>
+                    <p class="lead"><?php the_content() ?></p>
+                  </div>
+
+<?php endwhile;
+    endif; ?>
       <div class="col-md-12">
         <hr />
         <ul>
@@ -29,8 +40,7 @@
 </body>
 
 
-<!-- JAVASCRIPT
-     ================================================== -->
+<!-- JS references -->
 <script src="<?php bloginfo("template_url");?>/js/jquery.js"></script>
 <script src="<?php bloginfo("template_url");?>/js/bootstrap.min.js"></script>
 <script src="<?php bloginfo("template_url");?>/js/animatescroll.js"></script>

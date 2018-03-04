@@ -2,13 +2,23 @@
 
 
 
-    <div class="container">
+<div class="container">
       <div class="row">
+        <?php
+              $args = array(
+                'post_type' => 'post',
+                'category_name' => 'slogan'
+              );
+              $the_query = new WP_Query ( $args );
+        ?>
+        <?php if ( have_posts() ) : while ( $the_query->have_posts() ) :
+                  $the_query->the_post(); ?>
         <div class="col-md-offset-2 col-md-8">
-          <h1>Everything's easily customizable.</h1>
-          <p class="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit</p>
-          <button type="button" class="app-store"></button>
+          <h1><?php the_title()?></h1>
+          <p class="lead"><?php the_content()?></p>
         </div>
+      <?php endwhile;
+      endif; ?>
       </div>
     </div>
   </section>
@@ -19,9 +29,22 @@
   <section class="payoff">
     <div class="container">
       <div class="row">
-        <div class="col-md-12">
-          <h1>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna.</h1>
-        </div>
+        <?php
+              $args = array(
+                'post_type' => 'post',
+                'category_name' => 'story'
+              );
+              $the_query = new WP_Query ( $args );
+        ?>
+        <?php if ( have_posts() ) : while ( $the_query->have_posts() ) :
+                  $the_query->the_post(); ?>
+
+                  <div class="col-md-12">
+                    <h1><?php the_excerpt()?></h1>
+                  </div>
+                <?php endwhile;
+                endif; ?>
+
       </div>
     </div>
   </section>
