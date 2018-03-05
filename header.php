@@ -33,7 +33,7 @@
       </div>
       <div class="collapse navbar-collapse navbar-ex1-collapse">
         <ul class="nav navbar-nav">
-          <li><a onclick="$('header').animatescroll({padding:71});">Start</a></li>
+          <li><a onclick="$('header').animatescroll({padding:71});">Home</a></li>
           <li><a onclick="$('.detail').animatescroll({padding:71});">Screens</a></li>
           <li><a onclick="$('.features').animatescroll({padding:71});">Features</a></li>
           <li><a onclick="$('.social').animatescroll({padding:71});">Social	</a></li>
@@ -51,7 +51,7 @@
         <div class="col-md-12">
           <h1><?php bloginfo('name'); ?></h1>
           <p class="lead"><?php bloginfo('description'); ?></p>
-          <img class="header-img" src="<?php echo get_bloginfo('template_url')?>/img/iphone-x.png" />
+          <img class="header-img" src="<?php echo( get_header_image() ); ?>" />
         </div>
       </div>
     </div>

@@ -2,7 +2,7 @@
 $(document).ready(function() {
 	$('header').addClass('visibility');
 
-	$('.payoff h1').addClass('visibility');
+	$('.screens h1').addClass('visibility');
 	$('.features .col-md-4').addClass('visibility');
 	$('.social .col-md-12').addClass('visibility');
 });
@@ -30,7 +30,7 @@ var scrollTop = $(window).scrollTop();
 
 
 //animations
-	$('.payoff h1').each(function(){
+	$('.screens h1').each(function(){
 
 		var imagePos = $(this).offset().top;
 		var topOfWindow = $(window).scrollTop();
@@ -96,7 +96,7 @@ function parallax() {
 		var scaleBg = -$(window).scrollTop() / 3;
 
         if (iOS === false) {
-            $('.payoff').css('background-position-y', scaleBg - 150);
+            $('.screens').css('background-position-y', scaleBg - 150);
             $('.social').css('background-position-y', scaleBg + 200);
         }
 

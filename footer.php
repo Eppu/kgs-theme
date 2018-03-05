@@ -24,14 +24,7 @@
     endif; ?>
       <div class="col-md-12">
         <hr />
-        <ul>
-          <li><a href="#link-here">Contact</a></li>
-          <li><a href="#link-here">Twitter</a></li>
-          <li><a href="#link-here">Press</a></li>
-          <li><a href="#link-here">Support</a></li>
-          <li><a href="#link-here">Developers</a></li>
-          <li><a href="#link-here">Privacy</a></li>
-        </ul>
+        <p class="credits">&copy; <a href="http://eetueskelinen.com">Eetu Eskelinen</a> <?php echo date("Y"); ?></p>
       </div>
     </div>
   </div>

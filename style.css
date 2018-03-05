@@ -82,7 +82,7 @@ header h1,
 .social a:hover{
 	color: #155060;
 }
-.payoff h1{
+.screens h1{
 	color: #c5c5c5;;
 }
 
@@ -186,9 +186,12 @@ header p.lead{
 .header-img{
 	margin-right: auto;
 	margin-left: auto;
-	width: 320px;
-	height: 672px;
+	width: 100%
+	height: 100%
+	max-width: 320px;
+	max-height: 672px;
 	background-size: 100%;
+	padding-top: 20px;
 
 }
 
@@ -205,10 +208,10 @@ header p.lead{
 
 
 /*-----------------------------------------------------------------------------------*/
-/*	PAYOFF
+/*	screens
 /*-----------------------------------------------------------------------------------*/
 
-.payoff{
+.screens{
 	overflow: hidden;
 	padding: 230px 0px 150px 0px;
 	min-height: 600px;
@@ -219,7 +222,7 @@ header p.lead{
 }
 
 
-.payoff h1{
+.screens h1{
 	text-transform: uppercase;
 	font-weight: 300;
 	font-family: 'Roboto Condensed', sans-serif;
@@ -399,12 +402,7 @@ header p.lead{
 	font-size: 20px;
 }
 
-.get-it button.app-store{
-	width: 152px;
-	height: 52px;
-	background: url(img/badge-appstore.png) #373737 no-repeat 0px 5px;
-	color: white;
-}
+
 
 .get-it hr{
 	margin-top: 3em;
@@ -443,6 +441,17 @@ header p.lead{
 	cursor: pointer;
 }
 
+.credits {
+	font-size: 18px !important;
+}
+.credits a {
+	color: #aaa;
+	text-decoration: none;
+}
+.credits a:hover {
+	text-decoration: underline;
+}
+
 /*-----------------------------------------------------------------------------------*/
 /*	MEDIA QUERIES
 /*-----------------------------------------------------------------------------------*/
@@ -459,8 +468,6 @@ header p.lead{
 		float: left;
 		text-align: left;
 }
-
-
 }
 
 @media (max-width:992px) {
@@ -478,13 +485,13 @@ header, .social{
 	background-size: 200%;
 }
 
-.payoff{
+.screens{
 	padding-top: 50px;
 	padding-bottom: 50px;
 	min-height: 200px;
 }
 
-.payoff h1{
+.screens h1{
 	font-size: 24px;
 }
 
@@ -527,13 +534,4 @@ header, .social{
 		margin-bottom: 50px;
 	}
 
-}
-
-@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
-    /* Retina-specific stuff here */
-    .purchasebutton.app-store, .get-it button.app-store{
-        background: url(img/badge-appstore@2x.png) #3a3a3a no-repeat 0px 5px;
-        background-size: 98%;
-    	color: white;
-    }
 }

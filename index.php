@@ -24,9 +24,9 @@
   </section>
 
 
-  <!-- PAYOFF
+  <!-- screens
 	      ================================================== -->
-  <section class="payoff">
+  <section class="screens">
     <div class="container">
       <div class="row">
         <?php
