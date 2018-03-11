@@ -1,7 +1,5 @@
 <?php get_header();?>
 
-
-
 <div class="container">
       <div class="row">
         <?php
@@ -23,10 +21,8 @@
     </div>
   </section>
 
-
-  <!-- screens
-	      ================================================== -->
-  <section class="screens">
+  <!-- slogan -->
+  <section class="slogan">
     <div class="container">
       <div class="row">
         <?php
@@ -44,14 +40,11 @@
                   </div>
                 <?php endwhile;
                 endif; ?>
-
       </div>
     </div>
   </section>
 
-
-  <!-- DETAILS
-	      ================================================== -->
+  <!-- details -->
         <section class="detail">
     		<div class="container">
     			<div class="row">
@@ -67,11 +60,10 @@
                   			);
                   			$the_query = new WP_Query ( $args );
                   ?>
-    					  <!-- Carousel slides -->
-
+    					  <!-- image carousel -->
                 <?php if ( have_posts() ) : while ( $the_query->have_posts() ) :
-                            $the_query->the_post(); ?>
-
+                            $the_query->the_post();
+                 ?>
 
                             <div class="item <?php if ( $the_query->current_post == 0 ) : ?>active<?php endif; ?>">
                               <div class="row">
@@ -90,7 +82,7 @@
                           endif; ?>
                         </div>
                 <?php rewind_posts(); ?>
-    					  <!-- Carousel Indicators -->
+    					  <!-- carousel buttons -->
     					  <ol class="carousel-indicators">
                   <?php if ( have_posts() ) : while ( $the_query->have_posts() ) : $the_query->the_post(); ?>
 						             <li data-target="#carousel-example-generic-2"data-slide-to="<?php echo $the_query->current_post; ?>"
@@ -104,8 +96,7 @@
     		</div>
     	</section>
 
-
-  <!-- FEATURES ================================================== -->
+  <!-- features -->
   <section class="features">
     <div class="container">
       <div class="row">
@@ -134,9 +125,8 @@
   </section>
 
 
-  <!-- SOCIAL
-	     ================================================== -->
-  <section class="social">
+  <!-- Get in touch -->
+  <section class="contact">
     <div class="container">
       <div class="row">
         <?php

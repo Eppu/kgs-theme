@@ -1,9 +1,8 @@
 </section>
 
 
-<!-- GET IT
-     ================================================== -->
-<section class="get-it">
+<!-- available -->
+<section class="available">
   <div class="container">
     <div class="row">
       <?php
