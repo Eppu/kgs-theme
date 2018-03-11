@@ -1,5 +1,4 @@
 <?php get_header();?>
-
 <div class="container">
       <div class="row">
         <?php
@@ -21,7 +20,6 @@
     </div>
   </section>
 
-  <!-- slogan -->
   <section class="slogan">
     <div class="container">
       <div class="row">
@@ -38,21 +36,17 @@
                   <div class="col-md-12">
                     <h1><?php the_excerpt()?></h1>
                   </div>
-                <?php endwhile;
-                endif; ?>
+        <?php endwhile;
+        endif; ?>
       </div>
     </div>
   </section>
-
-  <!-- details -->
         <section class="detail">
     		<div class="container">
     			<div class="row">
     				<div class="col-md-12">
     					<div id="carousel-example-generic-2" class="carousel slide">
                 <div class="carousel-inner">
-
-
                   <?php
                   			$args = array(
                   				'post_type' => 'post',
@@ -60,10 +54,9 @@
                   			);
                   			$the_query = new WP_Query ( $args );
                   ?>
-    					  <!-- image carousel -->
-                <?php if ( have_posts() ) : while ( $the_query->have_posts() ) :
+                  <?php if ( have_posts() ) : while ( $the_query->have_posts() ) :
                             $the_query->the_post();
-                 ?>
+                  ?>
 
                             <div class="item <?php if ( $the_query->current_post == 0 ) : ?>active<?php endif; ?>">
                               <div class="row">
@@ -82,7 +75,6 @@
                           endif; ?>
                         </div>
                 <?php rewind_posts(); ?>
-    					  <!-- carousel buttons -->
     					  <ol class="carousel-indicators">
                   <?php if ( have_posts() ) : while ( $the_query->have_posts() ) : $the_query->the_post(); ?>
 						             <li data-target="#carousel-example-generic-2"data-slide-to="<?php echo $the_query->current_post; ?>"
@@ -96,15 +88,13 @@
     		</div>
     	</section>
 
-  <!-- features -->
   <section class="features">
     <div class="container">
       <div class="row">
         <?php
               $args = array(
                 'post_type' => 'post',
-                'category_name' => 'features'
-              );
+                'category_name' => 'features');
               $the_query = new WP_Query ( $args );
         ?>
 
@@ -124,8 +114,6 @@
     </div>
   </section>
 
-
-  <!-- Get in touch -->
   <section class="contact">
     <div class="container">
       <div class="row">
@@ -145,7 +133,6 @@
         </div>
       <?php endwhile;
       endif; ?>
-
       </div>
     </div>
 

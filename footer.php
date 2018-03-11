@@ -37,6 +37,6 @@
 <script src="<?php bloginfo("template_url");?>/js/bootstrap.min.js"></script>
 <script src="<?php bloginfo("template_url");?>/js/animatescroll.js"></script>
 <script src="<?php bloginfo("template_url");?>/js/scripts.js"></script>
-<script src="<?php bloginfo("template_url");?>/js/retina.min.js"></script>
+
 
 </html>

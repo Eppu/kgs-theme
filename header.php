@@ -11,10 +11,7 @@
   <link href="<?php bloginfo("stylesheet_url");?>" rel="stylesheet">
   <?php wp_head();?>
 </head>
-
 <body>
-
-<!-- Nav -->
   <nav class="navbar navbar-default" role="navigation">
     <div class="container">
       <div class="navbar-header">
@@ -28,17 +25,15 @@
       </div>
       <div class="collapse navbar-collapse navbar-ex1-collapse">
         <ul class="nav navbar-nav">
-          <li><a onclick="$('header').animatescroll({padding:71});">Home</a></li>
-          <li><a onclick="$('.detail').animatescroll({padding:71});">Details</a></li>
-          <li><a onclick="$('.features').animatescroll({padding:71});">Features</a></li>
-          <li><a onclick="$('.contact').animatescroll({padding:71});">Get in Touch</a></li>
+          <li><a onclick="$('header').animatescroll({padding:50});">Home</a></li>
+          <li><a onclick="$('.detail').animatescroll({padding:50});">Details</a></li>
+          <li><a onclick="$('.features').animatescroll({padding:50});">Features</a></li>
+          <li><a onclick="$('.contact').animatescroll({padding:50});">Get in Touch</a></li>
         </ul>
       </div>
     </div>
   </nav>
 
-
-  <!-- header -->
   <header>
     <div class="container" id="header">
       <div class="row">
@@ -51,6 +46,4 @@
     </div>
   </header>
 
-
-  <!-- company -->
   <section class="company">
