@@ -4,7 +4,7 @@
         <?php
               $args = array(
                 'post_type' => 'post',
-                'category_name' => 'slogan'
+                'category_name' => 'company'
               );
               $the_query = new WP_Query ( $args );
         ?>
@@ -19,14 +19,14 @@
       </div>
     </div>
   </section>
-
+<!-- Slogan section -->
   <section class="slogan">
     <div class="container">
       <div class="row">
         <?php
               $args = array(
                 'post_type' => 'post',
-                'category_name' => 'story'
+                'category_name' => 'slogan'
               );
               $the_query = new WP_Query ( $args );
         ?>
@@ -41,7 +41,8 @@
       </div>
     </div>
   </section>
-        <section class="detail">
+  <!-- Product section -->
+  <section class="product">
     		<div class="container">
     			<div class="row">
     				<div class="col-md-12">
@@ -50,14 +51,14 @@
                   <?php
                   			$args = array(
                   				'post_type' => 'post',
-                  				'category_name' => 'details'
+                  				'category_name' => 'products'
                   			);
                   			$the_query = new WP_Query ( $args );
                   ?>
                   <?php if ( have_posts() ) : while ( $the_query->have_posts() ) :
                             $the_query->the_post();
                   ?>
-
+                          <!-- Could add links to product page to these, if you wanted to. -->
                             <div class="item <?php if ( $the_query->current_post == 0 ) : ?>active<?php endif; ?>">
                               <div class="row">
             					      		<div class="col-sm-12 col-md-offset-1 col-md-6">
@@ -87,7 +88,7 @@
     			</div>
     		</div>
     	</section>
-
+  <!-- Feature section -->
   <section class="features">
     <div class="container">
       <div class="row">
@@ -97,10 +98,8 @@
                 'category_name' => 'features');
               $the_query = new WP_Query ( $args );
         ?>
-
         <?php if ( have_posts() ) : while ( $the_query->have_posts() ) :
                     $the_query->the_post(); ?>
-
         <div class="col-md-4">
           <div class="circle" style="background-image: url(<?php echo wp_get_attachment_url(get_post_thumbnail_id());?>)"></div>
           <h2><?php the_title() ?></h2>
@@ -113,7 +112,7 @@
       </div>
     </div>
   </section>
-
+  <!-- Contact section, could add a contact form here if you wanted to -->
   <section class="contact">
     <div class="container">
       <div class="row">
@@ -135,5 +134,4 @@
       endif; ?>
       </div>
     </div>
-
 <?php get_footer();?>

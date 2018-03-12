@@ -1,7 +1,5 @@
 </section>
-
-
-<!-- available -->
+<!-- Available now section -->
 <section class="available">
   <div class="container">
     <div class="row">
@@ -18,9 +16,8 @@
                     <h1><?php the_title() ?></h1>
                     <p class="lead"><?php the_content() ?></p>
                   </div>
-
-<?php endwhile;
-    endif; ?>
+      <?php endwhile;
+      endif; ?>
       <div class="col-md-12">
         <hr />
         <p class="credits">&copy; <a href="http://eetueskelinen.com">Eetu Eskelinen</a> <?php echo date("Y"); ?></p>
@@ -28,15 +25,13 @@
     </div>
   </div>
 </section>
-<?php wp_footer();?>
-</body>
-
-
-<!-- JS references -->
-<script src="<?php bloginfo("template_url");?>/js/jquery.js"></script>
+<!-- Content end -->
+<!-- JS -->
+<script src="<?php bloginfo("template_url");?>/js/jquery-3.3.1.js"></script>
 <script src="<?php bloginfo("template_url");?>/js/bootstrap.min.js"></script>
 <script src="<?php bloginfo("template_url");?>/js/animatescroll.js"></script>
 <script src="<?php bloginfo("template_url");?>/js/scripts.js"></script>
 
-
+<?php wp_footer();?>
+</body>
 </html>

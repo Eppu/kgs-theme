@@ -7,4 +7,3 @@ remove_filter('the_content', 'wpautop');
 add_theme_support( 'custom-header' );
 //Would have added support for multiple different background images for different sections if I had the time!
 ?>
-
